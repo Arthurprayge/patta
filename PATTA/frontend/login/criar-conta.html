@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Criar conta | Tai Vet Pet Hotel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <img class="logo" src="img/logoTaiVet.svg" alt="Tai Vet Pet Hotel">
+ 
+    <form id="form-criar" novalidate>
+      <h1>Criar conta</h1>
+      <p class="subtitulo">Cadastre-se para gerenciar seus pets e solicitar serviços.</p>
+ 
+      <div class="campo">
+        <label for="nome">Nome completo</label>
+        <div class="entrada">
+          <i class="fa-regular fa-user"></i>
+          <input id="nome" type="text" placeholder="Seu nome">
+        </div>
+      </div>
+ 
+      <div class="campo">
+        <label for="email">Email</label>
+        <div class="entrada">
+          <i class="fa-regular fa-envelope"></i>
+          <input id="email" type="email" placeholder="seuemail@gmail.com">
+        </div>
+      </div>
+ 
+      <div class="campo">
+        <label for="telefone">Telefone</label>
+        <div class="entrada">
+          <i class="fa-solid fa-phone"></i>
+          <input id="telefone" type="tel" placeholder="(xx) xxxx-xxxx">
+        </div>
+      </div>
+ 
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <div class="entrada">
+          <i class="fa-solid fa-lock"></i>
+          <input id="senha" type="password" placeholder="************************">
+          <button type="button" class="olho"><i class="fa-regular fa-eye"></i></button>
+        </div>
+      </div>
+ 
+      <div class="campo">
+        <label for="confirmar">Confirmar a Senha</label>
+        <div class="entrada">
+          <i class="fa-solid fa-lock"></i>
+          <input id="confirmar" type="password" placeholder="************************">
+          <button type="button" class="olho"><i class="fa-regular fa-eye"></i></button>
+        </div>
+      </div>
+ 
+      <label class="termos">
+        <input id="termos" type="checkbox">
+        Concordo com os termos de uso e a política de privacidade da Tai Vet.
+      </label>
+ 
+      <button class="botao" type="submit">Criar conta</button>
+      <p class="troca"><a href="entrar.html">Já tem uma conta? Entrar</a></p>
+    </form>
+  </main>
+ 
+  <footer></footer>
+  <script src="script.js"></script>
+</body>
+</html>
+ 

@@ -1,0 +1,174 @@
+/* ===== Variáveis ===== */
+:root {
+  --verde: #137335;
+  --verde-escuro: #0a4d22;
+  --bege: #f5eedb;
+  --cinza: #ececec;
+  --preto: #111;
+}
+
+/* ===== Base ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--preto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Layout ===== */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: var(--bege);
+  background-image: url('img/patinhas.svg');
+  background-repeat: repeat;
+}
+
+footer {
+  height: 120px;
+  background: var(--verde-escuro);
+}
+
+.logo { width: 180px; margin-bottom: 30px; }
+
+/* ===== Formulário ===== */
+form { width: 100%; max-width: 360px; }
+
+h1 {
+  font-size: 40px;
+  color: var(--verde);
+  line-height: 1.1;
+}
+
+.subtitulo {
+  font-size: 18px;
+  color: var(--verde);
+  margin: 6px 0 20px;
+}
+
+.campo { margin-bottom: 14px; }
+
+label {
+  display: block;
+  margin-left: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--verde);
+}
+
+.entrada {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 40px;
+  padding: 0 14px;
+  background: var(--cinza);
+  border: 1.5px solid var(--preto);
+  border-radius: 14px;
+}
+
+.entrada:focus-within { outline: 3px solid rgba(19, 115, 53, .4); }
+.entrada.erro { border-color: #c0392b; }
+
+.entrada i { font-size: 20px; }
+
+.entrada input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: none;
+  outline: none;
+  font: inherit;
+  font-size: 18px;
+}
+
+.entrada input::placeholder { color: var(--preto); opacity: 1; }
+
+.olho { border: 0; background: none; cursor: pointer; }
+
+/* ===== Extras ===== */
+.termos, .lembrar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.termos { margin: 18px 0 14px 6px; }
+
+.opcoes {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 6px 18px;
+  font-size: 11px;
+}
+
+.opcoes a { color: var(--preto); text-decoration: none; }
+
+button.botao {
+  display: block;
+  width: 90%;
+  height: 38px;
+  margin: 0 auto;
+  background: var(--verde);
+  color: #fff;
+  border: 1.5px solid var(--preto);
+  border-radius: 10px;
+  font: 600 19px 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+button.botao:hover { background: #0f5f2b; }
+
+.troca {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.troca a { color: var(--preto); text-decoration: none; }
+
+/* labels pequenos (checkbox) */
+label.termos, label.lembrar {
+  margin-left: 0;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--preto);
+}
+
+label.termos { margin: 18px 0 14px 6px; }
+
+/* ===== Responsivo ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  main { padding: 32px 20px; background-size: 320px; }
+  footer { height: 80px; }
+  .logo { width: 150px; margin-bottom: 24px; }
+  h1 { font-size: 34px; }
+  .subtitulo { font-size: 16px; }
+  label { font-size: 20px; }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+  main { padding: 24px 16px; background-size: 260px; }
+  footer { height: 60px; }
+  .logo { width: 120px; margin-bottom: 18px; }
+  h1 { font-size: 28px; }
+  .subtitulo { font-size: 14px; margin-bottom: 16px; }
+  label { font-size: 17px; margin-left: 6px; }
+  .entrada { height: 44px; gap: 10px; padding: 0 12px; }
+  .entrada i { font-size: 18px; }
+  .entrada input { font-size: 16px; } /* 16px evita zoom automático no iPhone */
+  button.botao { width: 100%; height: 44px; font-size: 18px; }
+  label.termos { align-items: flex-start; }
+  .opcoes { margin: 8px 2px 18px; }
+}
